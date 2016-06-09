@@ -16,6 +16,7 @@ public class ModifiedKaprekarNumbers {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //Nothing to be added
     }
     
 }
