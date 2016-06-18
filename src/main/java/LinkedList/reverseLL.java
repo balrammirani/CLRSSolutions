@@ -55,14 +55,14 @@ public class reverseLL {
 
     //Recursion
 
-    public void reverseLL(Node temp) {
+    public void reverseLL(Node head) {
         
-        if (temp.getNext() == null) {
+        if (head.getNext() == null) {
         } else {
             //temp = temp.getNext();
-            reverseLL(temp.getNext());
+            reverseLL(head.getNext());
         }
-        System.out.println(temp.getData()+" ");
+        System.out.println(head.getData()+" ");
     }
 
     /**
@@ -76,10 +76,8 @@ public class reverseLL {
         ll.insertatLast(4);
         ll.insertatLast(5);
         //ll.reverseDisplay();
-        //ll.display();
-        Node t = ll.head;
-        
-        ll.reverseLL(t);
+        ll.display();
+        ll.reverseLL(ll.head);
     }
 
 }
