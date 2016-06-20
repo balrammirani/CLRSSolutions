@@ -15,12 +15,12 @@ public class LinkedListBasics {
     Node temp, prev;
     int size;
 
-    public void insertatFirst(int data)
-    {
-        Node ins=new Node(data,null);
+    public void insertatFirst(int data) {
+        Node ins = new Node(data, null);
         ins.setNext(head);
-        head=ins;
+        head = ins;
     }
+
     public void insertatLast(int data) {
         Node add = new Node(data, null);
         size++;
@@ -37,7 +37,7 @@ public class LinkedListBasics {
             temp.setNext(add);
         }
     }
-   
+
     public void insertafter(int data, int insdata) {
         temp = head;
         while (temp.getData() != data) {
@@ -73,27 +73,39 @@ public class LinkedListBasics {
         }
     }
 
-    public void pop()
-    {
-        temp=head;
-        head=head.getNext();
-        
+    public void printList(Node head) {
+        if (head == null) {
+            return;
+        }
+        Node temp = head;
+        do {
+            System.out.print(temp.getData()+" ");
+            temp = temp.getNext();
+        } while (temp != head);
+        System.out.println("");
     }
+
+    public void pop() {
+        temp = head;
+        head = head.getNext();
+
+    }
+
     public void delete(int data) {
         temp = head;
         if (head.getData() == data) {
-            head = head.getNext()   ;
+            head = head.getNext();
             return;
         }
-        while (temp!=null&&temp.getData() != data) {
+        while (temp != null && temp.getData() != data) {
             prev = temp;
             temp = temp.getNext();
         }
         prev.setNext(temp.getNext());
         temp = null;
     }
-    public void sortAscending()
-    {
-        
+
+    public void sortAscending() {
+
     }
 }
